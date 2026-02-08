@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Your Valentine Page</title>
+    <style>
+        :root { --primary: #ff4d6d; --bg: #fff0f3; --text: #590d22; }
+        body { background: var(--bg); font-family: 'Segoe UI', sans-serif; display: flex; justify-content: center; padding: 20px; }
+        .container { background: white; width: 100%; max-width: 500px; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 25px rgba(255, 77, 109, 0.2); }
+        h1 { color: #800f2f; text-align: center; margin-bottom: 20px; }
+        label { display: block; margin: 10px 0 5px; font-weight: bold; color: var(--text); }
+        input, select, textarea { width: 100%; padding: 12px; border: 2px solid #ffccd5; border-radius: 10px; box-sizing: border-box; }
+        input[type="file"] { background: #fff0f3; padding: 10px; }
+        .btn-submit { background: var(--primary); color: white; width: 100%; padding: 15px; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; margin-top: 20px; }
+        .btn-submit:hover { background: #d90429; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💘 Valentine Generator</h1>
+        <form action="/valentine" method="POST" enctype="multipart/form-data">
+            <label>Your Name</label>
+            <input type="text" name="sender" required>
+            <label>Valentine's Name</label>
+            <input type="text" name="recipient" required>
+            <label>Style</label>
+            <select name="template">
+                <option value="playful">🎮 Playful</option>
+                <option value="romantic">💖 Romantic</option>
+                <option value="minimal">🤍 Minimal</option>
+            </select>
+            <label>Upload Photo (Optional)</label>
+            <input type="file" name="photo" accept="image/*">
+            <label>Message</label>
+            <textarea name="message" rows="3"></textarea>
+            <button type="submit" class="btn-submit">Create Page ✨</button>
+        </form>
+    </div>
+</body>
+</html>
