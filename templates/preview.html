@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For You my love ❤️</title>
@@ -92,6 +93,10 @@
         }
 
         function acceptLove() {
+            // 👇 Ye line server ko khabar degi (Spy Mode On)
+            fetch('/she-said-yes'); 
+
+            // Baaki sab decoration
             document.getElementById('celebration').style.display = 'block';
             document.querySelector('h1').innerText = "Hehe I knew it! 😘";
             document.querySelector('.buttons').style.display = 'none';
@@ -123,5 +128,4 @@
         document.head.appendChild(style);
     </script>
 </body>
-
 </html>
